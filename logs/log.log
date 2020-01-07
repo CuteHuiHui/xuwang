@@ -1,0 +1,30 @@
+[ INFO ] [2019-12-16 20:24:13] [ LOGID: ] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] Starting DemoApplication on DESKTOP-K2VKVS3 with PID 3216 (started by hui in E:\3 xuwang\SpringBootDemo1)
+[ INFO ] [2019-12-16 20:24:13] [ LOGID: ] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] No active profile set, falling back to default profiles: default
+[ INFO ] [2019-12-16 20:24:13] [ LOGID: ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127)] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[ INFO ] [2019-12-16 20:24:13] [ LOGID: ] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187)] Finished Spring Data repository scanning in 47ms. Found 1 JPA repository interfaces.
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330)] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Initializing ProtocolHandler ["http-nio-8080"]
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Starting service [Tomcat]
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Starting Servlet engine: [Apache Tomcat/9.0.29]
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Initializing Spring embedded WebApplicationContext
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] Root WebApplicationContext: initialization completed in 1439 ms
+[ INFO ] [2019-12-16 20:24:14] [ LOGID: ] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110)] HikariPool-1 - Starting...
+[ INFO ] [2019-12-16 20:24:15] [ LOGID: ] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123)] HikariPool-1 - Start completed.
+[ INFO ] [2019-12-16 20:24:15] [ LOGID: ] [org.hibernate.Version.logVersion(Version.java:46)] HHH000412: Hibernate Core {5.4.9.Final}
+[ INFO ] [2019-12-16 20:24:15] [ LOGID: ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:49)] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[ INFO ] [2019-12-16 20:24:15] [ LOGID: ] [org.hibernate.dialect.Dialect.<init>(Dialect.java:172)] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:52)] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416)] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[ WARN ] [2019-12-16 20:24:16] [ LOGID: ] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(JpaBaseConfiguration.java:220)] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] Initializing ExecutorService 'applicationTaskExecutor'
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Starting ProtocolHandler ["http-nio-8080"]
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] Tomcat started on port(s): 8080 (http) with context path ''
+[ INFO ] [2019-12-16 20:24:16] [ LOGID: ] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] Started DemoApplication in 4.141 seconds (JVM running for 5.737)
+[ INFO ] [2019-12-16 20:24:31] [ LOGID: ] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[ INFO ] [2019-12-16 20:24:31] [ LOGID: ] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] Initializing Servlet 'dispatcherServlet'
+[ INFO ] [2019-12-16 20:24:31] [ LOGID: ] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] Completed initialization in 10 ms
+[ ERROR ] [2019-12-16 20:24:31] [ LOGID: ] [com.xw.xuwang.controller.EmployeeController.getEmployeeList(EmployeeController.java:30)] error级别日志
+[ WARN ] [2019-12-16 20:24:31] [ LOGID: ] [com.xw.xuwang.controller.EmployeeController.getEmployeeList(EmployeeController.java:31)] warning级别日志
+[ INFO ] [2019-12-16 20:24:31] [ LOGID: ] [com.xw.xuwang.controller.EmployeeController.getEmployeeList(EmployeeController.java:32)] info级别日志
+[ INFO ] [2019-12-16 20:24:31] [ LOGID: ] [com.xw.xuwang.aspect.AopTest1.handlerPageResultBeanMethod(AopTest1.java:33)] 执行方法：PageResultBean com.xw.xuwang.controller.EmployeeController.getEmployeeList(Integer,Integer),用时：225

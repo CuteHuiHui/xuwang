@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xbsx.bos.system.basis.dao.CharteredBusDAO" >
+  <resultMap id="BaseResultMap" type="com.xbsx.bos.system.basis.entity.CharteredBus" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="merchant_no" property="merchantNo" jdbcType="VARCHAR" />
+    <result column="char_bus_phone" property="charBusPhone" jdbcType="INTEGER" />
+    <result column="char_bus_date_limit" property="charBusDateLimit" jdbcType="INTEGER" />
+    <result column="char_bus_money_rule_type" property="charBusMoneyRuleType" jdbcType="INTEGER" />
+    <result column="char_bus_money_price" property="charBusMoneyPrice" jdbcType="INTEGER" />
+    <result column="char_bus_refund_pwd" property="charBusRefundPwd" jdbcType="VARCHAR" />
+    <result column="create_operator_id" property="createOperatorId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_operator_id" property="updateOperatorId" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, merchant_no, char_bus_phone, char_bus_date_limit, char_bus_money_rule_type, char_bus_money_price, 
+    char_bus_refund_pwd, create_operator_id, create_time, update_operator_id, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from chartered_bus_cars_config
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from chartered_bus_cars_config
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.xbsx.bos.system.basis.entity.CharteredBus" >
+    insert into chartered_bus_cars_config (id, merchant_no, char_bus_phone, 
+      char_bus_date_limit, char_bus_money_rule_type, 
+      char_bus_money_price, char_bus_refund_pwd, create_operator_id, 
+      create_time, update_operator_id, update_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{merchantNo,jdbcType=VARCHAR}, #{charBusPhone,jdbcType=INTEGER}, 
+      #{charBusDateLimit,jdbcType=INTEGER}, #{charBusMoneyRuleType,jdbcType=INTEGER}, 
+      #{charBusMoneyPrice,jdbcType=INTEGER}, #{charBusRefundPwd,jdbcType=VARCHAR}, #{createOperatorId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateOperatorId,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xbsx.bos.system.basis.entity.CharteredBus" >
+    insert into chartered_bus_cars_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="merchantNo != null" >
+        merchant_no,
+      </if>
+      <if test="charBusPhone != null" >
+        char_bus_phone,
+      </if>
+      <if test="charBusDateLimit != null" >
+        char_bus_date_limit,
+      </if>
+      <if test="charBusMoneyRuleType != null" >
+        char_bus_money_rule_type,
+      </if>
+      <if test="charBusMoneyPrice != null" >
+        char_bus_money_price,
+      </if>
+      <if test="charBusRefundPwd != null" >
+        char_bus_refund_pwd,
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="merchantNo != null" >
+        #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="charBusPhone != null" >
+        #{charBusPhone,jdbcType=INTEGER},
+      </if>
+      <if test="charBusDateLimit != null" >
+        #{charBusDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="charBusMoneyRuleType != null" >
+        #{charBusMoneyRuleType,jdbcType=INTEGER},
+      </if>
+      <if test="charBusMoneyPrice != null" >
+        #{charBusMoneyPrice,jdbcType=INTEGER},
+      </if>
+      <if test="charBusRefundPwd != null" >
+        #{charBusRefundPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="createOperatorId != null" >
+        #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xbsx.bos.system.basis.entity.CharteredBus" >
+    update chartered_bus_cars_config
+    <set >
+      <if test="merchantNo != null" >
+        merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="charBusPhone != null" >
+        char_bus_phone = #{charBusPhone,jdbcType=INTEGER},
+      </if>
+      <if test="charBusDateLimit != null" >
+        char_bus_date_limit = #{charBusDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="charBusMoneyRuleType != null" >
+        char_bus_money_rule_type = #{charBusMoneyRuleType,jdbcType=INTEGER},
+      </if>
+      <if test="charBusMoneyPrice != null" >
+        char_bus_money_price = #{charBusMoneyPrice,jdbcType=INTEGER},
+      </if>
+      <if test="charBusRefundPwd != null" >
+        char_bus_refund_pwd = #{charBusRefundPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id = #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xbsx.bos.system.basis.entity.CharteredBus" >
+    update chartered_bus_cars_config
+    set merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      char_bus_phone = #{charBusPhone,jdbcType=INTEGER},
+      char_bus_date_limit = #{charBusDateLimit,jdbcType=INTEGER},
+      char_bus_money_rule_type = #{charBusMoneyRuleType,jdbcType=INTEGER},
+      char_bus_money_price = #{charBusMoneyPrice,jdbcType=INTEGER},
+      char_bus_refund_pwd = #{charBusRefundPwd,jdbcType=VARCHAR},
+      create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_operator_id = #{updateOperatorId,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

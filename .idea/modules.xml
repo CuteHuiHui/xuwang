@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MybatisGenerator-master/MybatisGenerator.iml" filepath="$PROJECT_DIR$/MybatisGenerator-master/MybatisGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootDemo1.iml" filepath="$PROJECT_DIR$/.idea/SpringBootDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuwang/xuwang.iml" filepath="$PROJECT_DIR$/xuwang/xuwang.iml" />
+    </modules>
+  </component>
+</project>

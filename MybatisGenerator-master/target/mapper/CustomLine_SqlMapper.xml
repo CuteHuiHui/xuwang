@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xbsx.bos.system.basis.dao.CustomLineDAO" >
+  <resultMap id="BaseResultMap" type="com.xbsx.bos.system.basis.entity.CustomLine" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="merchant_no" property="merchantNo" jdbcType="VARCHAR" />
+    <result column="cust_line_refund_pwd" property="custLineRefundPwd" jdbcType="VARCHAR" />
+    <result column="cust_line_refund_ticket_rule" property="custLineRefundTicketRule" jdbcType="INTEGER" />
+    <result column="cust_line_single_refund_time" property="custLineSingleRefundTime" jdbcType="INTEGER" />
+    <result column="cust_line_single_date_limit" property="custLineSingleDateLimit" jdbcType="INTEGER" />
+    <result column="cust_line_single_count_limit" property="custLineSingleCountLimit" jdbcType="INTEGER" />
+    <result column="cust_line_week_refund_time" property="custLineWeekRefundTime" jdbcType="INTEGER" />
+    <result column="cust_line_week_date_limit" property="custLineWeekDateLimit" jdbcType="INTEGER" />
+    <result column="cust_line_week_count_limit" property="custLineWeekCountLimit" jdbcType="INTEGER" />
+    <result column="cust_line_month_refund_time" property="custLineMonthRefundTime" jdbcType="INTEGER" />
+    <result column="cust_line_month_date_limit" property="custLineMonthDateLimit" jdbcType="INTEGER" />
+    <result column="cust_line_month_count_limit" property="custLineMonthCountLimit" jdbcType="INTEGER" />
+    <result column="positive_public_key" property="positivePublicKey" jdbcType="VARCHAR" />
+    <result column="positive_private_key" property="positivePrivateKey" jdbcType="VARCHAR" />
+    <result column="create_operator_id" property="createOperatorId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="update_operator_id" property="updateOperatorId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, merchant_no, cust_line_refund_pwd, cust_line_refund_ticket_rule, cust_line_single_refund_time, 
+    cust_line_single_date_limit, cust_line_single_count_limit, cust_line_week_refund_time, 
+    cust_line_week_date_limit, cust_line_week_count_limit, cust_line_month_refund_time, 
+    cust_line_month_date_limit, cust_line_month_count_limit, positive_public_key, positive_private_key, 
+    create_operator_id, create_time, update_time, update_operator_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from custom_line_bus_config
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from custom_line_bus_config
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.xbsx.bos.system.basis.entity.CustomLine" >
+    insert into custom_line_bus_config (id, merchant_no, cust_line_refund_pwd, 
+      cust_line_refund_ticket_rule, cust_line_single_refund_time, 
+      cust_line_single_date_limit, cust_line_single_count_limit, 
+      cust_line_week_refund_time, cust_line_week_date_limit, 
+      cust_line_week_count_limit, cust_line_month_refund_time, 
+      cust_line_month_date_limit, cust_line_month_count_limit, 
+      positive_public_key, positive_private_key, 
+      create_operator_id, create_time, update_time, 
+      update_operator_id)
+    values (#{id,jdbcType=BIGINT}, #{merchantNo,jdbcType=VARCHAR}, #{custLineRefundPwd,jdbcType=VARCHAR}, 
+      #{custLineRefundTicketRule,jdbcType=INTEGER}, #{custLineSingleRefundTime,jdbcType=INTEGER}, 
+      #{custLineSingleDateLimit,jdbcType=INTEGER}, #{custLineSingleCountLimit,jdbcType=INTEGER}, 
+      #{custLineWeekRefundTime,jdbcType=INTEGER}, #{custLineWeekDateLimit,jdbcType=INTEGER}, 
+      #{custLineWeekCountLimit,jdbcType=INTEGER}, #{custLineMonthRefundTime,jdbcType=INTEGER}, 
+      #{custLineMonthDateLimit,jdbcType=INTEGER}, #{custLineMonthCountLimit,jdbcType=INTEGER}, 
+      #{positivePublicKey,jdbcType=VARCHAR}, #{positivePrivateKey,jdbcType=VARCHAR}, 
+      #{createOperatorId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{updateOperatorId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xbsx.bos.system.basis.entity.CustomLine" >
+    insert into custom_line_bus_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="merchantNo != null" >
+        merchant_no,
+      </if>
+      <if test="custLineRefundPwd != null" >
+        cust_line_refund_pwd,
+      </if>
+      <if test="custLineRefundTicketRule != null" >
+        cust_line_refund_ticket_rule,
+      </if>
+      <if test="custLineSingleRefundTime != null" >
+        cust_line_single_refund_time,
+      </if>
+      <if test="custLineSingleDateLimit != null" >
+        cust_line_single_date_limit,
+      </if>
+      <if test="custLineSingleCountLimit != null" >
+        cust_line_single_count_limit,
+      </if>
+      <if test="custLineWeekRefundTime != null" >
+        cust_line_week_refund_time,
+      </if>
+      <if test="custLineWeekDateLimit != null" >
+        cust_line_week_date_limit,
+      </if>
+      <if test="custLineWeekCountLimit != null" >
+        cust_line_week_count_limit,
+      </if>
+      <if test="custLineMonthRefundTime != null" >
+        cust_line_month_refund_time,
+      </if>
+      <if test="custLineMonthDateLimit != null" >
+        cust_line_month_date_limit,
+      </if>
+      <if test="custLineMonthCountLimit != null" >
+        cust_line_month_count_limit,
+      </if>
+      <if test="positivePublicKey != null" >
+        positive_public_key,
+      </if>
+      <if test="positivePrivateKey != null" >
+        positive_private_key,
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="merchantNo != null" >
+        #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="custLineRefundPwd != null" >
+        #{custLineRefundPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custLineRefundTicketRule != null" >
+        #{custLineRefundTicketRule,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleRefundTime != null" >
+        #{custLineSingleRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleDateLimit != null" >
+        #{custLineSingleDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleCountLimit != null" >
+        #{custLineSingleCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekRefundTime != null" >
+        #{custLineWeekRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekDateLimit != null" >
+        #{custLineWeekDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekCountLimit != null" >
+        #{custLineWeekCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthRefundTime != null" >
+        #{custLineMonthRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthDateLimit != null" >
+        #{custLineMonthDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthCountLimit != null" >
+        #{custLineMonthCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="positivePublicKey != null" >
+        #{positivePublicKey,jdbcType=VARCHAR},
+      </if>
+      <if test="positivePrivateKey != null" >
+        #{positivePrivateKey,jdbcType=VARCHAR},
+      </if>
+      <if test="createOperatorId != null" >
+        #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xbsx.bos.system.basis.entity.CustomLine" >
+    update custom_line_bus_config
+    <set >
+      <if test="merchantNo != null" >
+        merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="custLineRefundPwd != null" >
+        cust_line_refund_pwd = #{custLineRefundPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="custLineRefundTicketRule != null" >
+        cust_line_refund_ticket_rule = #{custLineRefundTicketRule,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleRefundTime != null" >
+        cust_line_single_refund_time = #{custLineSingleRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleDateLimit != null" >
+        cust_line_single_date_limit = #{custLineSingleDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineSingleCountLimit != null" >
+        cust_line_single_count_limit = #{custLineSingleCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekRefundTime != null" >
+        cust_line_week_refund_time = #{custLineWeekRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekDateLimit != null" >
+        cust_line_week_date_limit = #{custLineWeekDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineWeekCountLimit != null" >
+        cust_line_week_count_limit = #{custLineWeekCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthRefundTime != null" >
+        cust_line_month_refund_time = #{custLineMonthRefundTime,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthDateLimit != null" >
+        cust_line_month_date_limit = #{custLineMonthDateLimit,jdbcType=INTEGER},
+      </if>
+      <if test="custLineMonthCountLimit != null" >
+        cust_line_month_count_limit = #{custLineMonthCountLimit,jdbcType=INTEGER},
+      </if>
+      <if test="positivePublicKey != null" >
+        positive_public_key = #{positivePublicKey,jdbcType=VARCHAR},
+      </if>
+      <if test="positivePrivateKey != null" >
+        positive_private_key = #{positivePrivateKey,jdbcType=VARCHAR},
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id = #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xbsx.bos.system.basis.entity.CustomLine" >
+    update custom_line_bus_config
+    set merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      cust_line_refund_pwd = #{custLineRefundPwd,jdbcType=VARCHAR},
+      cust_line_refund_ticket_rule = #{custLineRefundTicketRule,jdbcType=INTEGER},
+      cust_line_single_refund_time = #{custLineSingleRefundTime,jdbcType=INTEGER},
+      cust_line_single_date_limit = #{custLineSingleDateLimit,jdbcType=INTEGER},
+      cust_line_single_count_limit = #{custLineSingleCountLimit,jdbcType=INTEGER},
+      cust_line_week_refund_time = #{custLineWeekRefundTime,jdbcType=INTEGER},
+      cust_line_week_date_limit = #{custLineWeekDateLimit,jdbcType=INTEGER},
+      cust_line_week_count_limit = #{custLineWeekCountLimit,jdbcType=INTEGER},
+      cust_line_month_refund_time = #{custLineMonthRefundTime,jdbcType=INTEGER},
+      cust_line_month_date_limit = #{custLineMonthDateLimit,jdbcType=INTEGER},
+      cust_line_month_count_limit = #{custLineMonthCountLimit,jdbcType=INTEGER},
+      positive_public_key = #{positivePublicKey,jdbcType=VARCHAR},
+      positive_private_key = #{positivePrivateKey,jdbcType=VARCHAR},
+      create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_operator_id = #{updateOperatorId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

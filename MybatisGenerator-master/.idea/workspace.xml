@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c38978a-bb4a-4e65-9d10-df66f78d0b01" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1PSPBBfnLW62SwdOy3KrVxqumOA" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="GenerateCodeTest.testGenerateCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisGenerator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lgb.MybatisGenerator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lgb.MybatisGenerator" />
+      <option name="MAIN_CLASS_NAME" value="com.lgb.MybatisGenerator.GenerateCodeTest" />
+      <option name="METHOD_NAME" value="testGenerateCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GenerateCodeTest.testGenerateCode" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c38978a-bb4a-4e65-9d10-df66f78d0b01" name="Default Changelist" comment="" />
+      <created>1565864386764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565864386764</updated>
+      <workItem from="1565864388392" duration="2385000" />
+      <workItem from="1565872881912" duration="1000" />
+      <workItem from="1565923575656" duration="2576000" />
+      <workItem from="1565943505872" duration="1387000" />
+      <workItem from="1566012425813" duration="2686000" />
+      <workItem from="1566118643042" duration="1234000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

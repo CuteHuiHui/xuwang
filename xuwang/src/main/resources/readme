@@ -1,0 +1,13 @@
+1.引入lombok jar包
+2.引入pageHelper jar包
+3.API规范
+4.引入JPA jar包，修改配置文件                                                    与Mybatis的区别？？？？？？？？
+    a.  extends JpaRepository
+    b.  实体类必须加@Entity
+                   @Id  @GeneratedValue
+    插入时实体类一定要有无参构造函数。
+5.引入AOP jar包，修改配置文件,编写切面
+6.引入log4j2 jar包，加入配置文件log4j2-spring.xml，去除与log4j冲突的包
+7.引入redis jar包，修改配置文件，重写RedisConfig，工具类RedisUtil
+    redis缓存。在Controller层加注解。注意的是，返回的实体需要序列化。
+8.引入easyPoi jar包，工具类FileWithExcelUtil，导入importExcel，导出exportExcel。

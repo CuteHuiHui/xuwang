@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xbsx.bos.system.basis.dao.MerchantDAO" >
+  <resultMap id="BaseResultMap" type="com.xbsx.bos.system.basis.entity.Merchant" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="merchant_no" property="merchantNo" jdbcType="VARCHAR" />
+    <result column="merchant_name" property="merchantName" jdbcType="VARCHAR" />
+    <result column="merchant_cn" property="merchantCn" jdbcType="VARCHAR" />
+    <result column="merchant_en" property="merchantEn" jdbcType="VARCHAR" />
+    <result column="city_id" property="cityId" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="logo_url" property="logoUrl" jdbcType="VARCHAR" />
+    <result column="service_type_list" property="serviceTypeList" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="is_deleted" property="isDeleted" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_operator_id" property="createOperatorId" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="update_operator_id" property="updateOperatorId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, merchant_no, merchant_name, merchant_cn, merchant_en, city_id, address, phone, 
+    email, logo_url, service_type_list, state, is_deleted, create_time, create_operator_id, 
+    update_time, update_operator_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from base_merchant
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from base_merchant
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.xbsx.bos.system.basis.entity.Merchant" >
+    insert into base_merchant (id, merchant_no, merchant_name, 
+      merchant_cn, merchant_en, city_id, 
+      address, phone, email, 
+      logo_url, service_type_list, state, 
+      is_deleted, create_time, create_operator_id, 
+      update_time, update_operator_id)
+    values (#{id,jdbcType=BIGINT}, #{merchantNo,jdbcType=VARCHAR}, #{merchantName,jdbcType=VARCHAR}, 
+      #{merchantCn,jdbcType=VARCHAR}, #{merchantEn,jdbcType=VARCHAR}, #{cityId,jdbcType=INTEGER}, 
+      #{address,jdbcType=VARCHAR}, #{phone,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, 
+      #{logoUrl,jdbcType=VARCHAR}, #{serviceTypeList,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
+      #{isDeleted,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{createOperatorId,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{updateOperatorId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xbsx.bos.system.basis.entity.Merchant" >
+    insert into base_merchant
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="merchantNo != null" >
+        merchant_no,
+      </if>
+      <if test="merchantName != null" >
+        merchant_name,
+      </if>
+      <if test="merchantCn != null" >
+        merchant_cn,
+      </if>
+      <if test="merchantEn != null" >
+        merchant_en,
+      </if>
+      <if test="cityId != null" >
+        city_id,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="logoUrl != null" >
+        logo_url,
+      </if>
+      <if test="serviceTypeList != null" >
+        service_type_list,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="isDeleted != null" >
+        is_deleted,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="merchantNo != null" >
+        #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantName != null" >
+        #{merchantName,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantCn != null" >
+        #{merchantCn,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantEn != null" >
+        #{merchantEn,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null" >
+        #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceTypeList != null" >
+        #{serviceTypeList,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="isDeleted != null" >
+        #{isDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createOperatorId != null" >
+        #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xbsx.bos.system.basis.entity.Merchant" >
+    update base_merchant
+    <set >
+      <if test="merchantNo != null" >
+        merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantName != null" >
+        merchant_name = #{merchantName,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantCn != null" >
+        merchant_cn = #{merchantCn,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantEn != null" >
+        merchant_en = #{merchantEn,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        city_id = #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null" >
+        logo_url = #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceTypeList != null" >
+        service_type_list = #{serviceTypeList,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="isDeleted != null" >
+        is_deleted = #{isDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createOperatorId != null" >
+        create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateOperatorId != null" >
+        update_operator_id = #{updateOperatorId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xbsx.bos.system.basis.entity.Merchant" >
+    update base_merchant
+    set merchant_no = #{merchantNo,jdbcType=VARCHAR},
+      merchant_name = #{merchantName,jdbcType=VARCHAR},
+      merchant_cn = #{merchantCn,jdbcType=VARCHAR},
+      merchant_en = #{merchantEn,jdbcType=VARCHAR},
+      city_id = #{cityId,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      logo_url = #{logoUrl,jdbcType=VARCHAR},
+      service_type_list = #{serviceTypeList,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      is_deleted = #{isDeleted,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_operator_id = #{createOperatorId,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_operator_id = #{updateOperatorId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
