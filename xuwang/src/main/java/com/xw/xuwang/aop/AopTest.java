@@ -62,4 +62,5 @@ public class AopTest {
         logger.info("大家好，我是@AfterThrowing，他们犯的错误，我来背锅");
         logger.info("错误信息"+e.getMessage());
     }
+    //222222
 }
