@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MybatisGenerator-master/MybatisGenerator.iml" filepath="$PROJECT_DIR$/MybatisGenerator-master/MybatisGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootDemo1.iml" filepath="$PROJECT_DIR$/.idea/SpringBootDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xuwang/demo.iml" filepath="$PROJECT_DIR$/xuwang/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/xuwang/xuwang.iml" filepath="$PROJECT_DIR$/xuwang/xuwang.iml" />
     </modules>
   </component>

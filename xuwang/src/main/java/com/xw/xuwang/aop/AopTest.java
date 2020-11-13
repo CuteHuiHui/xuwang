@@ -16,6 +16,28 @@ import org.slf4j.LoggerFactory;
  * @version 1.0
  */
 public class AopTest {
+
+    //master
+
+    public static void main(String[] args) {
+        // array表示一个长度为n的数组 // 代码中的array.length就等于n
+        int[] array = new int[5];
+        int count = 0;
+        int val = 6;
+        if (count == array.length) {
+            int sum = 0;
+            for (int i = 0; i < array.length; ++i) {
+                sum = sum + array[i];
+            }
+            array[0] = sum;
+            count = 1;
+        }
+        array[count] = val;
+        ++count;
+    }
+
+
+
     //测试git
     private static final Logger logger = LoggerFactory.getLogger(AopTest.class);
 
